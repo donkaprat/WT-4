@@ -23,3 +23,5 @@ ts-node toto.ts => exécute le ts
 node ou ts-node toto.js => exécute le js
 
 Règle de performances de base pour un langage interprété : LE MOINS DE CARACTERES POSSIBLES (INCLUS /N)
+
+en TS, NE JAMAIS UTILISER VAR mais TOUJOURS LET

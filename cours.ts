@@ -108,4 +108,48 @@ let anArray: NullableStringArray = [];
 anArray.push('Foo Bar');
 anArray.push(null);
 
+// fonctions
+function add(op1 : number, op2 : number) : number{
+	return op1 + op2;
+}
+console.log(add(3,6));
+// le retour est implicite s'il n'y a qune instruction
+// si j'ai un bloc d'instructions ({}) je dois dire explicitement le return
+let addArrow = (op1 : number, op2 : number) => op1 +op2;
+console.log(addArrow(3,6));
 
+
+// Classe : permet de regrouper des variables entre elles avec les fonctions qui utilisent ces variables
+interface Vehicule{
+	nb_roues : number;
+	foo : () => string;	
+}
+class Voiture implements Vehicule{
+	marque : string;
+	couleur : string;
+	puissance : number;
+	nb_roues : number;
+	// pour créer une variable de type Voiture, un objet, on passe par le constructeur
+	constructor(marque : string, couleur : string, puissance : number, nbroues : number){
+		// this indique que c'est la variable de la classe
+		this.marque = marque;
+		this.couleur = couleur;
+		this.puissance = puissance;
+		this.nb_roues = nbroues;
+	}
+	affiche(){
+		console.log("La marque " + this.marque + " - " + this.puissance + " CV");
+	}
+	foo(){
+		return 'Vehicule : Voiture';
+	}
+}
+// public, private, protected, par défaut : public
+// static (référence à la classe et pas à l'objet)
+let cocci : Voiture = new Voiture('VW','verte',4,4);
+console.log(cocci.marque);
+cocci.affiche();
+// objet à la volée
+//let ds : Voiture = {marque : "Citroen", couleur: "noir", puissance : 5, affiche : () => "La marque " + this.marque + " - " + this.puissance + " CV"};	// crade
+//console.log(ds.affiche());
+console.log(cocci.foo());

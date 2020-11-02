@@ -105,6 +105,16 @@ function notImplemented() { throw new Error('Not yet imlemented.'); }
 // Function types
 var aFunc;
 aFunc = function (a, b) { return a * b; };
+// type NullableStringArray2 = Array<string?>;	// crash
 var anArray = [];
 anArray.push('Foo Bar');
 anArray.push(null);
+// fonctions
+function add(op1, op2) {
+    return op1 + op2;
+}
+console.log(add(3, 6));
+// le retour est implicite s'il n'y a qune instruction
+// si j'ai un bloc d'instructions ({}) je dois dire explicitement le return
+var addArrow = function (op1, op2) { return op1 + op2; };
+console.log(addArrow(3, 6));
