@@ -1,0 +1,25 @@
+Installation : 
+NPM = node paquet manager : registre de paquets JS, apt/yum de JS
+Créer votre répetoire de travail et placer vous dedans
+ouvrir un shell, cmd (en mode administrateur)
+Se placer dans le répertoire de travail créé précédemment
+npm install typescript --save-dev
+installation globale: -g
+npm install ts-node --save-dev
+npm install tsc --save-dev
+
+Typescript est une surcouche PROPRE à JS : typsecript est rigoureux (notamment typé).
+
+Compilation avantage : optimisation
+Compilé : on passe par un phase de génération de code avec un nouveau fichier exécuté dans l'os
+Interpété : on lit le code au moment de l'exécuter, avantage = protabilité
+Langage hybrique : Java, C#, Typescript : on interprète le fichier compilé : on tire les avantages de la compilation et de l'interprétation
+
+Miracle TS : créé pas MS mais il est utilisé en premier par Google
+
+Lignes de commande
+tsc toto.ts => compile toto.ts en toto.js
+ts-node toto.ts => exécute le ts
+node ou ts-node toto.js => exécute le js
+
+Règle de performances de base pour un langage interprété : LE MOINS DE CARACTERES POSSIBLES (INCLUS /N)
