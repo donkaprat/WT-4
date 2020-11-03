@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Autoriser le mot export en TS, 
+		donc les modules ou le code TS dans plusieur fichiers -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.35/system.js"></script>
+</head>
+
+<body>
+    <script>
+System.import('./main.js').then(m => {
+    m.Greeter.greet();
+});
+    </script>
+</body>
+
+</html>
