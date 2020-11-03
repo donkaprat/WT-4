@@ -153,10 +153,34 @@ var myPets: pet[] = [
         { name: 'Jasmine', age: 9, weight: 55 },
         { name: 'Rush', age: 15, weight: 45 },
         { name: 'Roxie', age: 6, weight: 85 }
-    ];
+
+];
 var compareAge = function (a: pet, b: pet) {
         if (a.age < b.age) { return -1; }
         if (a.age > b.age) {return 1; }
         return 0;
 }
 console.log(myPets.sort(compareAge));
+
+class employee2 {
+        userId: string;
+        displayUserId() {
+            setTimeout(() => {
+                console.log(`"this.UserId" with an arror function is: ${this.userId}`);
+            }, 1000);
+    }
+}
+let myEmployee2 = new employee2();
+myEmployee2.userId = 'abc123';
+
+
+// exo absent (pour marcus et josh)
+// create a function to be used as a callback.  This is our callback function.
+let myCB = function () {
+    console.log('The callback just ran...');
+};
+// create a function and pass in the callback method.
+function myFunction(cb: () => void) {
+    cb();
+}
+ myFunction(myCB); // calling the new function and pass in the callback.
