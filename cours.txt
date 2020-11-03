@@ -25,3 +25,24 @@ node ou ts-node toto.js => exécute le js
 Règle de performances de base pour un langage interprété : LE MOINS DE CARACTERES POSSIBLES (INCLUS /N)
 
 en TS, NE JAMAIS UTILISER VAR mais TOUJOURS LET
+
+Méthodes sur les Arrays
+- forEach : applique des instructions à chaque élément
+tab.forEach(e => console.log(e))
+- push pour ajouter
+- pop retire un élément et le retourne
+- map : crée un nouvel Array en fonction du premier
+tab.map(e => e*e)
+- reduce : crée une valeur du type de l'élément à partir du tableau
+tab.reduce((e,a) => a+=e)
+- filter crée un novueau tableau qui correspond à une condition
+tab.filter(e => e % 2 == 0)
+- shift suprrime le premier élément
+- unshift ajoute en premier élément
+- some renvoie un élément parmi ceux qui correspondent à une condition
+tab.some(e => e % 2 == 0)
+- sort pour trier le table (0 pour légalité positif pour > et négatif pour <)
+- join transofrme l'Array en String
+- splice pour ajouter ou supprimer des éléments
+- concat pour ajouter un tableau à un autre
+- slice obtenir des sous-tableaux

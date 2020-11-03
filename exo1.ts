@@ -162,7 +162,7 @@ var compareAge = function (a: pet, b: pet) {
 }
 console.log(myPets.sort(compareAge));
 
-class employee2 {
+class displayUserId {
         userId: string;
         displayUserId() {
             setTimeout(() => {
@@ -170,8 +170,8 @@ class employee2 {
             }, 1000);
     }
 }
-let myEmployee2 = new employee2();
-myEmployee2.userId = 'abc123';
+let displayUserId = new displayUserId();
+displayUserId.userId = 'abc123';
 
 
 // exo absent (pour marcus et josh)
