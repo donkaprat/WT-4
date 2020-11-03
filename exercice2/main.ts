@@ -52,7 +52,7 @@ const users = [
     status: 'alternant'
   }
 ];
-export const franckMonod = {
+const franckMonod = {
   id: 5,
   name: 'Franck',
   age: 27,
